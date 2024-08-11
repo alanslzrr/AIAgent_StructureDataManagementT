@@ -96,7 +96,7 @@ Note: To change the schema loaded in MongoDB, you only need to update the schema
 
 Here's an example of the system in action:
 
-![Agent AI Demo](images/AgentAI.gif)
+![Agent AI Demo](images/AgentAI.jpg)
 
 The results are accurately reflected in the MongoDB database:
 

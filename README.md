@@ -12,17 +12,6 @@ This system is designed to manage and query calibration certificates stored in a
 
 ![Workflow Diagram](images/workflowdiagram.jpg)
 
-## Table of Contents
-
-1. [Technologies Used](#technologies-used)
-2. [System Architecture](#system-architecture)
-3. [Setup and Installation](#setup-and-installation)
-4. [MongoDB Configuration](#mongodb-configuration)
-5. [Key Concepts](#key-concepts)
-6. [Usage Guide](#usage-guide)
-7. [File Structure](#file-structure)
-8. [Customization and Extension](#customization-and-extension)
-9. [Performance Considerations](#performance-considerations)
 
 ## Features
 - Real-time tracking of certificate expirations
@@ -53,40 +42,18 @@ Before setting up the system, ensure you have:
 - A MongoDB Atlas account or a local MongoDB server
 - An OpenAI API key
 
-## Setup and Installation
+## Setup
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/your-repo/calibration-certificate-system.git
-   cd calibration-certificate-system
-   ```
-
-2. Create a virtual environment:
-   ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
-
-3. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-4. Set up environment variables:
+1. Set up environment variables:
    Create a `.env` file in the root directory with the following content:
    ```
    MONGODB_URI=your_mongodb_connection_string
    OPENAI_API_KEY=your_openai_api_key
    ```
 
-5. Configure the MongoDB schema:
+2. Configure the MongoDB schema:
    - Edit the `prompt.txt` file to match your desired schema structure.
    - Update the `sample.txt` file with corresponding example queries.
-
-6. Start the application:
-   ```
-   streamlit run main.py
-   ```
 
 ## MongoDB Configuration
 
@@ -121,7 +88,7 @@ Note: To change the schema loaded in MongoDB, you only need to update the schema
    - A text input for entering natural language queries about the certificates.
 
 3. Enter questions in natural language, such as:
-   - "What is the average environmental temperature across all certificates?"
+
    - "How many certificates are there for each equipment type?"
    - "What are the top 5 manufacturers with the most certificates?"
 
@@ -139,10 +106,6 @@ LangSmith provides detailed analytics on query performance:
 
 ![LangSmith Example](images/LangSmithExample.jpg)
 
-Examples of complex queries the system can handle:
-- "Show me the distribution of calibration due dates for each manufacturer over the next 6 months."
-- "What is the correlation between environmental temperature and measurement uncertainty across all certificates?"
-- "Identify any trends in the 'AsFound' vs 'AfterAdjustment' measurements for a specific equipment type over the last year."
 
 ## File Structure
 
